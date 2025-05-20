@@ -30,14 +30,14 @@ public class BrowserFactory {
 			ChromeOptions options = new ChromeOptions();
 			options.addArguments("--incognito");
 			
-//			driver = new ChromeDriver(options);
+			//driver = new ChromeDriver(options);
 			try {
 				driver = new RemoteWebDriver(new URL("http://172.203.230.74:4444/wd/hub"),options);
 			} catch (MalformedURLException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
-			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(60));
 			break;
 		
 		case "edge":
