@@ -21,6 +21,10 @@ public class HomePage {
 	@CacheLookup
 	private WebElement searchIcon;
 	
+	@FindBy(xpath = "//span[normalize-space()='Wishlist']")
+	@CacheLookup
+	private WebElement wishlist;
+	
 	public void enterSearchText(String text)
 	{
 		searchInput.sendKeys(text);
@@ -29,6 +33,11 @@ public class HomePage {
 	public void clickSearchIcon()
 	{
 		searchIcon.click();
+	}
+	
+	public void clickWishlist()
+	{
+		wishlist.click();
 	}
 
 }

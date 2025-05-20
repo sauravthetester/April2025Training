@@ -28,7 +28,7 @@ public class Base {
 	{
 		WebDriver newDriver = BrowserFactory.getBrowser("chrome"); // Launching the browser
 		driver.set(newDriver); // Making it thread safe using ThreadLocal
-		driver.get().get("https://www.myntra.com/login?referer=https://www.myntra.com/wishlist"); // Opening webpage
+		driver.get().get("https://www.myntra.com/"); // Opening webpage
 		
 	}
 	

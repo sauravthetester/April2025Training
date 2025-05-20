@@ -5,6 +5,7 @@ import org.testng.annotations.Test;
 
 import base.Base;
 import listener.RetryAnalyzer;
+import pages.HomePage;
 import pages.LoginPage;
 
 
@@ -14,7 +15,8 @@ public class TryThis extends Base{
 	@Test(retryAnalyzer = RetryAnalyzer.class)
 	public void loginToMyntra1()
 	{
-		
+		HomePage homePage = new HomePage();
+		homePage.clickWishlist();
 		LoginPage loginPage = new LoginPage();
 		loginPage.enterMobileNumberInput();
 		
