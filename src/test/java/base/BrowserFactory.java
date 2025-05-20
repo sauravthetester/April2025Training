@@ -29,6 +29,7 @@ public class BrowserFactory {
 		case "chrome": 
 			ChromeOptions options = new ChromeOptions();
 			options.addArguments("--incognito");
+			options.addArguments("--window-size=1440,850");
 			
 			//driver = new ChromeDriver(options);
 			try {
@@ -37,7 +38,7 @@ public class BrowserFactory {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
-			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(60));
+			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 			break;
 		
 		case "edge":
